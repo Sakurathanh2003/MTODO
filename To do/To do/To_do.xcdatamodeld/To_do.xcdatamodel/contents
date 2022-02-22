@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="true" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21D62" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Work" representedClassName="Work" isAbstract="YES" syncable="YES" codeGenerationType="class">
+        <attribute name="important" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="mainWork" optional="YES" attributeType="String"/>
+        <attribute name="note" optional="YES" attributeType="String"/>
+        <attribute name="subWork" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Work" positionX="-65.734375" positionY="-601.32421875" width="128" height="103"/>
+    </elements>
 </model>
