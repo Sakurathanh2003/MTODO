@@ -16,6 +16,7 @@ class MainCell_TableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.backgroundColor = .clear
         
     }
 

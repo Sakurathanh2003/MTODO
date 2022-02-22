@@ -7,20 +7,27 @@
 
 import UIKit
 
+struct allData {
+    var list: [List]
+}
+
 class MainScreen_TableViewController: UITableViewController {
     
-    var MainList: [List] = [
-        List.init(name: "Ngày của tôi", icon: "sun.max", color: .systemOrange, listWork: []),
-        List.init(name: "Quan trọng", icon: "star", color: .systemPink.withAlphaComponent(60), listWork: []),
-        List.init(name: "Đã tập kế hoạch", icon: "calendar", color: .systemGreen, listWork: []),
-        List.init(name: "Đã giao cho tôi", icon: "person", color: .systemBlue, listWork: []),
-        List.init(name: "Tác vụ", icon: "house", color: .systemGray, listWork: [])
-    ]
-    var SubList: [List] = [
-        List.init()
+   var Data: [allData] = [
+        allData.init(list: [
+            List.init(name: "Ngày của tôi", icon: "sun.max", color: .systemOrange, listWork: []),
+            List.init(name: "Quan trọng", icon: "star", color: .systemPink.withAlphaComponent(60), listWork: []),
+            List.init(name: "Đã tập kế hoạch", icon: "calendar", color: .systemGreen, listWork: []),
+            List.init(name: "Đã giao cho tôi", icon: "person", color: .systemBlue, listWork: []),
+            List.init(name: "Tác vụ", icon: "house", color: .systemGray, listWork: [])
+        ]),
+        allData.init(list: [
+            List.init()
+        ])
     ]
     
-    var Data: []
+    
+    
 
     
     
@@ -28,7 +35,7 @@ class MainScreen_TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.singleLine
+        self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -46,7 +53,7 @@ class MainScreen_TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return Data[section].list.count
     }
 
     
@@ -54,6 +61,10 @@ class MainScreen_TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MainCell_TableViewCell
 
         // Configure the cell...
+        let item = Data[indexPath.section].list[indexPath.row]
+        
+        cell.icon.image = UIImage.init(systemName: item.icon)?.withTintColor(item.colorIcon, renderingMode: .alwaysOriginal)
+        cell.nameList.text = item.name
 
         return cell
     }
