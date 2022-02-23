@@ -1,5 +1,5 @@
 //
-//  MainScreen_TableViewController.swift
+//  DetailList_TableViewController.swift
 //  To do
 //
 //  Created by Vu Thanh on 22/02/2022.
@@ -7,87 +7,90 @@
 
 import UIKit
 
-struct allData {
-    var list: [List]
-}
-
-class MainScreen_TableViewController: UITableViewController {
+class DetailList_TableViewController: UITableViewController {
     
-   var Data: [allData] = [
-        allData.init(list: [
-            List.init(name: "Ngày của tôi", icon: "sun.max", color: .systemOrange, listWork: []),
-            List.init(name: "Quan trọng", icon: "star", color: .systemPink.withAlphaComponent(60), listWork: []),
-            List.init(name: "Đã tập kế hoạch", icon: "calendar", color: .systemGreen, listWork: []),
-            List.init(name: "Đã giao cho tôi", icon: "person", color: .systemBlue, listWork: []),
-            List.init(name: "Tác vụ", icon: "house", color: .systemGray, listWork: [])
-        ]),
-        allData.init(list: [
-            List.init()
-        ])
-    ]
+    @IBOutlet weak var nameList: UILabel!
+    @IBOutlet weak var time: UILabel!
+ 
+    @IBOutlet weak var but: UIButton!
     
-    var nextData: List?
+    var detailData : List?
     
-        override func viewDidLoad() {
+    
+    @IBAction func hh(_ sender: Any) {
+        print("hello")
+        if (but.tintColor == .gray){
+            but.setImage(UIImage(systemName: "heart.circle.fill"), for: .normal)
+            but.tintColor = detailData?.colorIcon
+        } else {
+            but.setImage(UIImage(systemName: "circle"), for: .normal)
+            but.tintColor = .gray
+        }
+        
+    }
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
-
+        
+        
+        // Get Todays Date
+        let date = NSDate()
+        var dateFormatter = DateFormatter()
+        
+        // định dạng thứ: EEEE
+        dateFormatter.dateFormat = "EEEE"
+        var dayName: String = dateFormatter.string(from: date as Date)
+        dayName = TransFormVietnamese(thu: dayName)
+        
+        // định dạng ngày: dd
+        dateFormatter.dateFormat = "dd"
+        let dayOfMonth: String = dateFormatter.string(from: date as Date)
+        
+        // định dạng tháng: MM
+        dateFormatter.dateFormat = "MM"
+        let month: String = dateFormatter.string(from: date as Date)
+        
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        nameList.text = detailData?.name
+        time.text = "\(dayName), \(dayOfMonth) tháng \(month)"
         
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
+        nameList.textColor = detailData?.colorIcon
+        time.textColor = detailData?.colorIcon
+        
+        but.tintColor = .gray
+                
     }
 
+   
     // MARK: - Table view data source
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let controller = segue.destination as? DetailList_TableViewController {
-            controller.detailData = nextData
-        }
-    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 2
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return Data[section].list.count
+        return 0
     }
 
-    
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MainCell_TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
-        let item = Data[indexPath.section].list[indexPath.row]
-        
-        cell.icon.image = UIImage.init(systemName: item.icon)?.withTintColor(item.colorIcon, renderingMode: .alwaysOriginal)
-        cell.nameList.text = item.name
 
         return cell
     }
-    
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        var view = UIView.init()
-        view.backgroundColor = .gray
-        return view
-    }
+    */
 
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 0.1
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        nextData = Data[indexPath.section].list[indexPath.row]
-        self.performSegue(withIdentifier: "detail", sender: nil)
-    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

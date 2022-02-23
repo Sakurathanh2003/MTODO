@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		837EE36F27C4DF0000E7DEC6 /* DetailList_TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837EE36E27C4DF0000E7DEC6 /* DetailList_TableViewController.swift */; };
 		83BB51A427C4C2DC00D17B56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BB51A327C4C2DC00D17B56 /* AppDelegate.swift */; };
 		83BB51A627C4C2DC00D17B56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BB51A527C4C2DC00D17B56 /* SceneDelegate.swift */; };
 		83BB51A827C4C2DC00D17B56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BB51A727C4C2DC00D17B56 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		837EE36E27C4DF0000E7DEC6 /* DetailList_TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailList_TableViewController.swift; sourceTree = "<group>"; };
 		83BB51A027C4C2DC00D17B56 /* To do.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To do.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83BB51A327C4C2DC00D17B56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83BB51A527C4C2DC00D17B56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				83BB51A527C4C2DC00D17B56 /* SceneDelegate.swift */,
 				83BB51A727C4C2DC00D17B56 /* ViewController.swift */,
 				83BB51BA27C4C33500D17B56 /* MainScreen_TableViewController.swift */,
+				837EE36E27C4DF0000E7DEC6 /* DetailList_TableViewController.swift */,
 				83BB51BC27C4C4C900D17B56 /* MainCell_TableViewCell.swift */,
 				83BB51A927C4C2DC00D17B56 /* Main.storyboard */,
 				83BB51AF27C4C2DD00D17B56 /* Assets.xcassets */,
@@ -154,6 +157,7 @@
 				83BB51A827C4C2DC00D17B56 /* ViewController.swift in Sources */,
 				83BB51A427C4C2DC00D17B56 /* AppDelegate.swift in Sources */,
 				83BB51BF27C4C86800D17B56 /* Class Data.swift in Sources */,
+				837EE36F27C4DF0000E7DEC6 /* DetailList_TableViewController.swift in Sources */,
 				83BB51A627C4C2DC00D17B56 /* SceneDelegate.swift in Sources */,
 				83BB51BD27C4C4C900D17B56 /* MainCell_TableViewCell.swift in Sources */,
 				83BB51AE27C4C2DC00D17B56 /* To_do.xcdatamodeld in Sources */,
