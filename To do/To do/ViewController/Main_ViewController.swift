@@ -41,15 +41,15 @@ class Main_ViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.tableView.delegate = self
         self.tableView.dataSource = self
         tableView.backgroundColor = UIColor.clear
-        navigationController?.navigationBar.prefersLargeTitles = false
+      //  navigationController?.navigationBar.prefersLargeTitles = false
 
 
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationBar.prefersLargeTitles = false
-        navigationController?.navigationBar.isHidden = true
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        navigationController?.navigationBar.prefersLargeTitles = false
+//        navigationController?.navigationBar.isHidden = true
+//    }
     
     
     

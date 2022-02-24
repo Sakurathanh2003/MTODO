@@ -67,10 +67,10 @@ class Detail_ViewController: UIViewController, UITableViewDelegate, UITableViewD
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationBar.isHidden = false
-    }
-    
+//    override func viewWillAppear(_ animated: Bool) {
+//        navigationController?.navigationBar.isHidden = false
+//    }
+//
 // MARK: Table View Delegate
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
