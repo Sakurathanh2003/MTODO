@@ -13,7 +13,7 @@ class Detail_ViewController: UIViewController, UITableViewDelegate, UITableViewD
     
    
     var detailData : List?
-    
+    var openMenu = SettingMenu()
     
     
     
@@ -61,7 +61,8 @@ class Detail_ViewController: UIViewController, UITableViewDelegate, UITableViewD
         navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: detailData?.colorIcon]
         tableView.backgroundColor = UIColor.clear
         
-        
+        //
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
        
         
         
@@ -77,7 +78,7 @@ class Detail_ViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
         
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return 1
+            return 2
     }
         
    
@@ -87,9 +88,15 @@ class Detail_ViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.nameList?.text = "Hello"
         cell.nameWork?.text = "kk"
         
+        
+        
         return cell
     }
     
-   
+    @IBAction func onMenu(_ sender: Any) {
+        openMenu.onMenu(self.view)
+    }
+    
+    
     
 }

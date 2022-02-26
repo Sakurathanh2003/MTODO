@@ -16,6 +16,22 @@ class DetaiCell_TableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+//        cell.backgroundColor = UIColor.white
+//            cell.layer.borderColor = UIColor.black.cgColor
+//                cell.layer.borderWidth = 1
+//                cell.layer.cornerRadius = 8
+//                cell.clipsToBounds = true
+        
+        self.contentView.backgroundColor = .white
+        self.contentView.layer.cornerRadius = 20
+        self.layer.cornerRadius = 20
+        self.clipsToBounds = true
+        
+        
+        //label
+        self.nameWork.textColor = .black
+        self.nameList.textColor = .black
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
