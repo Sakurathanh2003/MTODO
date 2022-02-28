@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetaiCell_TableViewCell: UITableViewCell {
+class DetaiCellTableViewCell: UITableViewCell {
     
     @IBOutlet weak var checkBox: UIButton!
     @IBOutlet weak var nameWork: UILabel!

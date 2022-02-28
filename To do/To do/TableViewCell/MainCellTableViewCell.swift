@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainCell_TableViewCell: UITableViewCell {
+class MainCellTableViewCell: UITableViewCell {
     
     @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var nameList: UILabel!

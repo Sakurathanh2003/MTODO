@@ -12,7 +12,7 @@ struct allData {
 }
 
 
-class Main_ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -55,7 +55,7 @@ class Main_ViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let controller = segue.destination as? Detail_ViewController {
+        if let controller = segue.destination as? DetailViewController {
             controller.detailData = nextData
             
         }
@@ -73,7 +73,7 @@ class Main_ViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MainCell_TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MainCellTableViewCell
 
         // Configure the cell...
         let item = Data[indexPath.section].list[indexPath.row]

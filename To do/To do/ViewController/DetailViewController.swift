@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Detail_ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -83,7 +83,7 @@ class Detail_ViewController: UIViewController, UITableViewDelegate, UITableViewD
         
    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath) as! DetaiCell_TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath) as! DetaiCellTableViewCell
             
         cell.nameList?.text = "Hello"
         cell.nameWork?.text = "kk"
