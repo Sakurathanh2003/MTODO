@@ -13,20 +13,20 @@ class List{
     var icon: String = "list.bullet"
     var colorIcon: UIColor! = .systemIndigo
     
-    var listWork: [Work] = []
+    var listTask: [Task] = []
     
-    init(name: String, icon: String, color: UIColor, listWork: [Work]){
+    init(name: String, icon: String, color: UIColor, listTask: [Task]){
         self.name = name
         self.icon = icon
         self.colorIcon = color
-        self.listWork = listWork
+        self.listTask = listTask
     }
     
     init(){
         self.name = "Danh sách chưa có tên"
         self.icon = "list.bullet"
         self.colorIcon = .systemIndigo
-        self.listWork = []
+        self.listTask = []
     }
 }
 
@@ -47,4 +47,21 @@ func TransFormVietnamese(thu: String) -> String {
     default:
         return "Chủ nhật"
     }
+}
+
+class Task {
+    var nameList: String?
+    var nameTask: String?
+    var nameSubList: [String] = []
+    
+    var finish: Bool = false
+    var love: Bool = false
+    
+    init(nameList: String, nameTask: String){
+        self.nameList = nameList
+        self.nameTask = nameTask
+    }
+    
+    
+    
 }

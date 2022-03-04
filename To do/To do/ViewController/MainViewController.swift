@@ -18,11 +18,11 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var Data: [allData] = [
          allData.init(list: [
-             List.init(name: "Ngày của tôi", icon: "sun.max", color: .systemOrange, listWork: []),
-             List.init(name: "Quan trọng", icon: "star", color: .systemPink.withAlphaComponent(60), listWork: []),
-             List.init(name: "Đã tập kế hoạch", icon: "calendar", color: .systemGreen, listWork: []),
-             List.init(name: "Đã giao cho tôi", icon: "person", color: .systemBlue, listWork: []),
-             List.init(name: "Tác vụ", icon: "house", color: .systemGray, listWork: [])
+             List.init(name: "Ngày của tôi", icon: "sun.max", color: .systemOrange, listTask: []),
+             List.init(name: "Quan trọng", icon: "star", color: .systemPink.withAlphaComponent(60), listTask: []),
+             List.init(name: "Đã tập kế hoạch", icon: "calendar", color: .systemGreen, listTask: []),
+             List.init(name: "Đã giao cho tôi", icon: "person", color: .systemBlue, listTask: []),
+             List.init(name: "Tác vụ", icon: "house", color: .systemGray, listTask: [])
          ]),
          allData.init(list: [
              List.init(),
@@ -57,7 +57,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let controller = segue.destination as? DetailViewController {
             controller.detailData = nextData
-            
         }
     }
 
@@ -111,6 +110,16 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func addNewButton(_ sender: Any) {
+        var new = List.init()
+        Data[1].list.append(new)
+        tableView.reloadData()
+        nextData = new
+        self.performSegue(withIdentifier: "detail", sender: nil)
+    }
+    @IBAction func addNewCButton(_ sender: Any) {
+        print("haha")
+    }
+    
 }
 

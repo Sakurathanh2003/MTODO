@@ -10,7 +10,7 @@ import UIKit
 class DetaiCellTableViewCell: UITableViewCell {
     
     @IBOutlet weak var checkBox: UIButton!
-    @IBOutlet weak var nameWork: UILabel!
+    @IBOutlet weak var nameTask: UILabel!
     @IBOutlet weak var nameList: UILabel!
 
     override func awakeFromNib() {
@@ -29,8 +29,9 @@ class DetaiCellTableViewCell: UITableViewCell {
         self.clipsToBounds = true
         
         
+        
         //label
-        self.nameWork.textColor = .black
+        self.nameTask.textColor = .black
         self.nameList.textColor = .black
     }
 

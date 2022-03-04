@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		836932C127D2022B00923270 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836932C027D2022B00923270 /* test.swift */; };
 		836B466627CA6E9F00AEF13F /* SettingMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836B466527CA6E9F00AEF13F /* SettingMenu.swift */; };
 		836B466827CA71FE00AEF13F /* CustomMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836B466727CA71FE00AEF13F /* CustomMenuTableViewCell.swift */; };
 		83BB51A427C4C2DC00D17B56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BB51A327C4C2DC00D17B56 /* AppDelegate.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		836932C027D2022B00923270 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		836B466527CA6E9F00AEF13F /* SettingMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingMenu.swift; sourceTree = "<group>"; };
 		836B466727CA71FE00AEF13F /* CustomMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenuTableViewCell.swift; sourceTree = "<group>"; };
 		83BB51A027C4C2DC00D17B56 /* To do.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To do.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +76,7 @@
 				83BB51A327C4C2DC00D17B56 /* AppDelegate.swift */,
 				83BB51A527C4C2DC00D17B56 /* SceneDelegate.swift */,
 				836B466527CA6E9F00AEF13F /* SettingMenu.swift */,
+				836932C027D2022B00923270 /* test.swift */,
 				83C500B627C65C83009B0510 /* ViewController */,
 				83C500B727C65C8B009B0510 /* TableViewCell */,
 				83BB51A927C4C2DC00D17B56 /* Main.storyboard */,
@@ -185,6 +188,7 @@
 				83BB51BD27C4C4C900D17B56 /* MainCellTableViewCell.swift in Sources */,
 				83BB51AE27C4C2DC00D17B56 /* To_do.xcdatamodeld in Sources */,
 				83C500B327C6593C009B0510 /* MainViewController.swift in Sources */,
+				836932C127D2022B00923270 /* test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
