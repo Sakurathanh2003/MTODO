@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21D62" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
-    <entity name="Entity" representedClassName="Entity" syncable="YES" codeGenerationType="class"/>
+    <entity name="Data" representedClassName="DataMO" syncable="YES">
+        <relationship name="main" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="List" inverseName="maindata" inverseEntity="List"/>
+        <relationship name="sub" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="List" inverseName="subdata" inverseEntity="List"/>
+    </entity>
+    <entity name="List" representedClassName="ListMO" syncable="YES">
+        <attribute name="color" optional="YES" attributeType="String"/>
+        <attribute name="icon" optional="YES" attributeType="String"/>
+        <attribute name="nameList" optional="YES" attributeType="String"/>
+        <relationship name="listTask" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Task" inverseName="list" inverseEntity="Task"/>
+        <relationship name="maindata" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Data" inverseName="main" inverseEntity="Data"/>
+        <relationship name="subdata" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Data" inverseName="sub" inverseEntity="Data"/>
+    </entity>
+    <entity name="SubTask" representedClassName="SubTaskMO" syncable="YES">
+        <attribute name="nameSubList" optional="YES" attributeType="String"/>
+        <relationship name="task" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="subTasks" inverseEntity="Task"/>
+    </entity>
+    <entity name="Task" representedClassName="TaskMO" syncable="YES">
+        <attribute name="finish" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="important" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="nameList" optional="YES" attributeType="String"/>
+        <attribute name="nameTask" optional="YES" attributeType="String"/>
+        <relationship name="list" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="List" inverseName="listTask" inverseEntity="List"/>
+        <relationship name="subTasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SubTask" inverseName="task" inverseEntity="SubTask"/>
+    </entity>
     <elements>
-        <element name="Entity" positionX="-54" positionY="-9" width="128" height="29"/>
+        <element name="Data" positionX="-699.625" positionY="-29.0546875" width="128" height="73"/>
+        <element name="List" positionX="-424.546875" positionY="-81.61328125" width="128" height="133"/>
+        <element name="SubTask" positionX="-26.6640625" positionY="256.0625" width="128" height="73"/>
+        <element name="Task" positionX="-248.6796875" positionY="130.6796875" width="128" height="133"/>
     </elements>
 </model>

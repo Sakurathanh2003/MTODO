@@ -42,21 +42,11 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         addNameWorkTextField.isHidden = true
         checkButton.isHidden = true
         // Get Todays Date
-        let date = NSDate()
-        var dateFormatter = DateFormatter()
         
-        // định dạng thứ: EEEE
-        dateFormatter.dateFormat = "EEEE"
-        var dayName: String = dateFormatter.string(from: date as Date)
-        dayName = TransFormVietnamese(thu: dayName)
         
-        // định dạng ngày: dd
-        dateFormatter.dateFormat = "dd"
-        let dayOfMonth: String = dateFormatter.string(from: date as Date)
         
-        // định dạng tháng: MM
-        dateFormatter.dateFormat = "MM"
-        let month: String = dateFormatter.string(from: date as Date)
+        
+        
         
         
         
@@ -66,7 +56,6 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         //nameList.text = detailData?.name
-       // time.text = "\(dayName), \(dayOfMonth) tháng \(month)"
         
        // nameList.textColor = detailData?.colorIcon
        // time.textColor = detailData?.colorIcon
